@@ -23,9 +23,11 @@ calculator_expression_t parse_calc_expr(const char *const expression);
 extern int add(int a, int b),  // --> a + b
     sub(int a, int b),         // --> a - b
     mul(int a, int b),         // --> a * b
+    divide(int a, int b),      // Richard's division a/b
+    remainder(int a, int b);   // Richard's modulus a%b
     // TODO: add assembly function for this
-    div_remainder(int a, int b,
-                  int *remainder);  // --> a / b, remainder=(a % b)
+//    div_remainder(int a, int b,
+//                  int *remainder);  // --> a / b, remainder=(a % b)
 
 // calculate the result with the given mathematic operator
 int calculate(const calculator_expression_t *expr, int *const remainder);
